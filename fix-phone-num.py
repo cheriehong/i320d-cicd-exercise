@@ -7,12 +7,12 @@ def fix_phone_num(phone_num_to_fix):
         raise ValueError(f"phone number must only contain digits; got \"{phone_num_to_fix}\"")
     if len(phone_num_to_fix) == 11:
         # The phone number is of length 11, so check if it has the "1" country code.
-        if phone_num_to_fix[0] != "1":
+        if phone_num_to_fix[0] != "1": 
             # The country code wasn't a "1", so the number is invalid.
             raise ValueError(f"phone numbers of length 11 must begin with a 1, got \"{phone_num_to_fix}\"")
         # Strip off the country code "1" from the beginning.
         # Resulting string should be of length 10 to work with formatting code below.
-        phone_num_to_fix = phone_num_to_fix[1:]
+        else phone_num_to_fix = phone_num_to_fix[1:]
 
     # given "5125558823". Split the parts, then recombine and return
     area_code = phone_num_to_fix[0:3]  # 512 (first three digits)
